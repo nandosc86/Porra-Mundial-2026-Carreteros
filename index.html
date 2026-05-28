@@ -137,7 +137,8 @@
             { nombre: "Alejandro Morente", puestos: ["España", "Inglaterra", "Japón", "Marruecos"] },
             { nombre: "Fernando Rodríguez", puestos: ["Francia", "España", "Argentina", "Inglaterra"] },
             { nombre: "Javier Jiménez-Castellanos", puestos: ["España", "Portugal", "Francia", "Inglaterra"] },
-            { nombre: "Carlos Finol", puestos: ["España", "Francia", "Argentina", "Paises Bajos"] }
+            { nombre: "Carlos Finol", puestos: ["España", "Francia", "Argentina", "Paises Bajos"] },
+            { nombre: "Humberto Chavez", puestos: ["Inglaterra", "Francia", "Portugal", "España"] }
         ]; // <-- El punto y coma debe ir justo aquí, al cerrar el array.
 
         // ==========================================
@@ -191,7 +192,7 @@
                     <div class="flex items-center justify-between border-b border-slate-800 pb-3 last:border-0 last:pb-0">
                         <span class="font-semibold ${coloresPuestos[i]} text-sm md:text-base">${nombresPuestos[i]}:</span>
                         <span class="font-bold bg-slate-950 px-3 py-1.5 rounded-lg border border-slate-700 text-xs md:text-sm tracking-wider text-emerald-400">
-                            ${RESULTADO_REAL[i] ? RESULTADO_REAL[i].toUpperCase() : '⚽ EN JUEGO'}
+                            ${RESULTADO_REAL[i] ? RESULTADO_REAL[i].toUpperCase() : '⚽ COMPETICIÓN SIN INICIAR'}
                         </span>
                     </div>
                 `;

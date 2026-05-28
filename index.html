@@ -4,28 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Porra Mundial 2026 - Departamento</title>
-    <!-- Tailwind CSS para un diseño limpio y rápido -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
-        /* Fondo con patrón de fútbol sutil */
+        /* Fondo corregido: Simulación de césped de estadio de noche con iluminación central */
         body {
+            background-color: #061f14;
             background-image: 
-                linear-gradient(to bottom, rgba(17, 24, 39, 0.9) 0%, rgba(17, 24, 39, 0.95) 100%),
-                url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIj48ZyBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiM2YjcyODA5OSIgZmlsbC1vcGFjaXR5PSIwLjA5Ij48cGF0aCBkPSJNMCAwaDQwdjQwaC00MFYwek0yMCAyMGgyMHYyMEgyMFYyMHowIDEwSDEwdjEwaDEwVjEwek0xMCAwSDB2MTBoMTBWMEw0MCAxMHYxMEgzMFYxMGgzMFYwaDEwVjEwSDEwVjB6Ii8+PC9nPjwvZz48L3N2Zz4='); /* Patrón de césped sintético */
+                radial-gradient(circle at 50% 30%, rgba(16, 185, 129, 0.2) 0%, rgba(0, 0, 0, 0) 70%),
+                linear-gradient(to bottom, rgba(4, 30, 18, 0.95) 0%, rgba(3, 18, 12, 0.98) 100%);
+            background-attachment: fixed;
         }
 
         /* Títulos estilizados con gradiente dorado */
         .text-gold {
-            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+            background: linear-gradient(135deg, #ffe066 0%, #f5a623 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        /* Estilo para las tarjetas de podio y premios (estadio de noche) */
+        /* Estilo para las tarjetas (diseño oscuro semitransparente que resalta sobre el verde) */
         .card-soccer {
-            background: rgba(31, 41, 55, 0.9);
-            border: 1px solid rgba(55, 65, 81, 1);
-            backdrop-filter: blur(5px);
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            backdrop-filter: blur(8px);
         }
 
         /* Estilo para la bandera de España */
@@ -36,29 +38,28 @@
             background: linear-gradient(to bottom, #AA151B 0%, #AA151B 33.3%, #F1BF00 33.3%, #F1BF00 66.6%, #AA151B 66.6%, #AA151B 100%);
             border-radius: 4px;
             border: 2px solid #fff;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-            margin-left: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.4);
             vertical-align: middle;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 min-h-screen font-sans">
+<body class="text-gray-100 min-h-screen font-sans">
 
     <div class="max-w-5xl mx-auto px-4 py-8">
         <!-- Cabecera con Bandera y Título del Mundial 2026 -->
         <header class="text-center mb-12 flex flex-col items-center">
-            <div class="flex items-center gap-2 mb-4">
+            <div class="flex items-center justify-center gap-4 mb-3 flex-wrap">
                 <div class="es-flag-icon" title="España"></div>
-                <h1 class="text-5xl font-black text-gold">
+                <h1 class="text-4xl md:text-5xl font-black text-gold tracking-tight">
                     PORRA MUNDIAL 2026
                 </h1>
                 <div class="es-flag-icon" title="España"></div>
             </div>
-            <p class="text-gray-400 text-lg">Tu boleto a la gloria futbolística del departamento</p>
+            <p class="text-emerald-400/80 text-base md:text-lg font-medium">🏆 Tu boleto a la gloria futbolística del departamento 🏆</p>
             
-            <div class="inline-block mt-8 bg-gray-800 border border-gray-700 rounded-lg px-8 py-4 shadow-xl card-soccer">
-                <span class="text-gray-400 text-sm block uppercase tracking-wider mb-1">💸 BOTE TOTAL RECAUDADO 💸</span>
-                <span id="bote-total" class="text-5xl font-black text-green-400">0 €</span>
+            <div class="inline-block mt-8 border rounded-xl px-8 py-4 shadow-2xl card-soccer">
+                <span class="text-gray-400 text-xs block uppercase tracking-widest mb-1 font-bold">💸 BOTE TOTAL RECAUDADO 💸</span>
+                <span id="bote-total" class="text-4xl md:text-5xl font-black text-green-400 drop-shadow-[0_2px_8px_rgba(34,197,94,0.3)]">0 €</span>
             </div>
         </header>
 
@@ -68,9 +69,9 @@
             <!-- COLUMNA IZQUIERDA: Estado del Torneo y Premios -->
             <div class="lg:col-span-1 space-y-6">
                 <!-- El Resultado Real (Lo que tú editas) -->
-                <div class="p-6 rounded-xl shadow-md card-soccer">
-                    <h2 class="text-2xl font-bold mb-6 flex items-center gap-3 text-amber-400">
-                        🏆 PODIO OFICIAL
+                <div class="p-6 rounded-xl shadow-xl card-soccer">
+                    <h2 class="text-xl font-bold mb-6 flex items-center gap-3 text-amber-400 uppercase tracking-wider border-b border-emerald-500/20 pb-3">
+                        ⚽ PODIO OFICIAL
                     </h2>
                     <div id="podio-oficial" class="space-y-4">
                         <!-- Se genera dinámicamente -->
@@ -78,8 +79,10 @@
                 </div>
 
                 <!-- Reparto Provisional de Premios -->
-                <div class="p-6 rounded-xl shadow-md card-soccer">
-                    <h2 class="text-2xl font-bold mb-6 text-emerald-400">💰 PREMIOS PROVISIONALES</h2>
+                <div class="p-6 rounded-xl shadow-xl card-soccer">
+                    <h2 class="text-xl font-bold mb-6 text-emerald-400 uppercase tracking-wider border-b border-emerald-500/20 pb-3">
+                        💰 REPARTO DE PREMIOS
+                    </h2>
                     <div id="lista-premios" class="space-y-5">
                         <!-- Se genera dinámicamente -->
                     </div>
@@ -88,14 +91,14 @@
 
             <!-- COLUMNA DERECHA: Tabla de Apuestas de los Participantes -->
             <div class="lg:col-span-2">
-                <div class="rounded-xl shadow-md overflow-hidden card-soccer">
-                    <div class="p-6 border-b border-gray-700 bg-gray-850">
-                        <h2 class="text-2xl font-bold text-blue-400">📋 APUESTAS DEL EQUIPO</h2>
+                <div class="rounded-xl shadow-xl overflow-hidden card-soccer">
+                    <div class="p-6 border-b border-emerald-500/20 bg-slate-900/50">
+                        <h2 class="text-xl font-bold text-blue-400 uppercase tracking-wider">📋 APUESTAS DEL EQUIPO</h2>
                     </div>
                     <div class="overflow-x-auto">
                         <table class="w-full text-left border-collapse">
                             <thead>
-                                <tr class="bg-gray-750 text-gray-400 uppercase text-xs tracking-wider border-b border-gray-700">
+                                <tr class="bg-slate-900/80 text-gray-400 uppercase text-xs tracking-wider border-b border-emerald-500/20">
                                     <th class="py-5 px-6">Participante</th>
                                     <th class="py-5 px-3 text-center">1º (50%)</th>
                                     <th class="py-5 px-3 text-center">2º (25%)</th>
@@ -103,7 +106,7 @@
                                     <th class="py-5 px-3 text-center">4º (10%)</th>
                                 </tr>
                             </thead>
-                            <tbody id="tabla-participantes" class="divide-y divide-gray-700">
+                            <tbody id="tabla-participantes" class="divide-y divide-slate-800">
                                 <!-- Se genera dinámicamente -->
                             </tbody>
                         </table>
@@ -120,12 +123,10 @@
         // 1. CONFIGURACIÓN DE LOS DATOS (EDITA AQUÍ)
         // ==========================================
         
-        // El precio que paga cada uno por participar
         const PRECIO_INSCRIPCION = 5; 
 
         // Pon aquí los países según vayan quedando en el mundial real.
         // Si no se sabe aún, déjalos vacíos como "" para que no puntúe.
-        // Ejemplo final: ["Argentina", "Francia", "Croacia", "Marruecos"]
         const RESULTADO_REAL = ["", "", "", ""]; 
 
         // Introduce aquí las apuestas de la oficina el día 1 de junio.
@@ -149,7 +150,6 @@
             let porcentajes = [0.50, 0.25, 0.15, 0.10];
             let acertantesPorPosicion = [[], [], [], []];
 
-            // Buscar acertantes
             PARTICIPANTES.forEach(p => {
                 for (let i = 0; i < 4; i++) {
                     if (RESULTADO_REAL[i] && p.puestos[i].toLowerCase() === RESULTADO_REAL[i].toLowerCase()) {
@@ -158,7 +158,6 @@
                 }
             });
 
-            // Aplicar regla de redistribución hacia arriba si hay categorías vacías
             for (let i = 3; i > 0; i--) {
                 if (RESULTADO_REAL[i] && acertantesPorPosicion[i].length === 0) {
                     let porcentajeAAgregar = porcentajes[i];
@@ -178,20 +177,19 @@
                             porcentajes[idx] += porcentajeAAgregar * proporcion;
                         });
                     } else {
-                        porcentajes[i] = porcentajeAAgregar; // Se queda el remanente si no hay ningún acierto arriba
+                        porcentajes[i] = porcentajeAAgregar; 
                     }
                 }
             }
 
-            // Renderizar Podio de control
             const nombresPuestos = ["🥇 1º Campeón", "🥈 2º Puesto", "🥉 3º Puesto", "⚽ 4º Puesto"];
-            const coloresPuestos = ["text-yellow-300", "text-gray-200", "text-amber-500", "text-amber-700"];
+            const coloresPuestos = ["text-yellow-400", "text-slate-300", "text-amber-600", "text-amber-800"];
             let podioHTML = '';
             for (let i = 0; i < 4; i++) {
                 podioHTML += `
-                    <div class="flex items-center justify-between border-b border-gray-700 pb-3 last:border-0 last:pb-0">
-                        <span class="font-semibold ${coloresPuestos[i]} text-lg">${nombresPuestos[i]}:</span>
-                        <span class="font-bold bg-gray-950 px-4 py-2 rounded-lg border border-gray-600 text-base shadow-inner">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-3 last:border-0 last:pb-0">
+                        <span class="font-semibold ${coloresPuestos[i]} text-sm md:text-base">${nombresPuestos[i]}:</span>
+                        <span class="font-bold bg-slate-950 px-3 py-1.5 rounded-lg border border-slate-700 text-xs md:text-sm tracking-wider text-emerald-400">
                             ${RESULTADO_REAL[i] ? RESULTADO_REAL[i].toUpperCase() : '⚽ EN JUEGO'}
                         </span>
                     </div>
@@ -199,7 +197,6 @@
             }
             document.getElementById('podio-oficial').innerHTML = podioHTML;
 
-            // Renderizar Premios
             let premiosHTML = '';
             for (let i = 0; i < 4; i++) {
                 let dineroCategoria = boteTotal * porcentajes[i];
@@ -207,33 +204,32 @@
                 let premioIndividual = numAcertantes > 0 ? dineroCategoria / numAcertantes : 0;
 
                 premiosHTML += `
-                    <div class="bg-gray-950 p-4 rounded-xl border border-gray-700 shadow-inner">
-                        <div class="flex justify-between items-center mb-1.5">
-                            <span class="text-base font-semibold text-gray-300">${nombresPuestos[i]}</span>
-                            <span class="text-xs text-gray-500 font-mono">Bote: ${dineroCategoria.toFixed(1)}€</span>
+                    <div class="bg-slate-950/60 p-4 rounded-xl border border-slate-800 shadow-inner">
+                        <div class="flex justify-between items-center mb-1">
+                            <span class="text-sm font-semibold text-slate-300">${nombresPuestos[i]}</span>
+                            <span class="text-xs text-slate-500 font-mono">Bote: ${dineroCategoria.toFixed(1)}€</span>
                         </div>
-                        <div class="text-2xl font-black text-white mb-1.5">${premioIndividual.toFixed(2)} € <span class="text-sm font-normal text-gray-400">/ ganador</span></div>
-                        <div class="text-sm text-gray-400 truncate">
-                            ${numAcertantes > 0 ? `🎯 ${acertantesPorPosicion[i].join(', ')}` : '❌ Sin acertantes (por ahora)'}
+                        <div class="text-xl font-black text-white mb-1">${premioIndividual.toFixed(2)} € <span class="text-xs font-normal text-slate-400">/ gan.</span></div>
+                        <div class="text-xs text-slate-400 truncate">
+                            ${numAcertantes > 0 ? `🎯 ${acertantesPorPosicion[i].join(', ')}` : '❌ Sin acertantes'}
                         </div>
                     </div>
                 `;
             }
             document.getElementById('lista-premios').innerHTML = premiosHTML;
 
-            // Renderizar Tabla de posiciones
             let tablaHTML = '';
             PARTICIPANTES.forEach(p => {
                 let celdasPuestos = '';
                 for (let i = 0; i < 4; i++) {
                     let esAcierto = RESULTADO_REAL[i] && p.puestos[i].toLowerCase() === RESULTADO_REAL[i].toLowerCase();
-                    let claseFondo = esAcierto ? 'bg-green-950 text-green-200 font-bold border-2 border-green-600 shadow-lg scale-105' : 'bg-gray-900 text-gray-300 border border-gray-800';
-                    celdasPuestos += `<td class="py-4 px-3 text-center text-sm"><span class="inline-block w-full py-2.5 rounded-lg ${claseFondo} transition-transform">${p.puestos[i].toUpperCase()}</span></td>`;
+                    let claseFondo = esAcierto ? 'bg-emerald-950 text-emerald-200 font-bold border-2 border-emerald-500 shadow-lg' : 'bg-slate-950/40 text-slate-300 border border-slate-900';
+                    celdasPuestos += `<td class="py-3 px-2 text-center text-xs md:text-sm"><span class="inline-block w-full py-2 rounded-lg ${claseFondo}">${p.puestos[i].toUpperCase()}</span></td>`;
                 }
 
                 tablaHTML += `
-                    <tr class="hover:bg-gray-750 transition-colors">
-                        <td class="py-5 px-6 font-semibold text-lg text-white border-r border-gray-700">${p.nombre}</td>
+                    <tr class="hover:bg-slate-900/30 transition-colors">
+                        <td class="py-4 px-6 font-semibold text-sm md:text-base text-white border-r border-slate-800/60">${p.nombre}</td>
                         ${celdasPuestos}
                     </tr>
                 `;
@@ -241,7 +237,6 @@
             document.getElementById('tabla-participantes').innerHTML = tablaHTML;
         }
 
-        // Ejecutar al cargar la página
         window.onload = inicializarPorra;
     </script>
 </body>
